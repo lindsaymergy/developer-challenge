@@ -1,31 +1,11 @@
 <head>
   <title>blueDevChallenger</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 
-<body>
-  <div class="main">
-    {{#if isUserLogged}}
-  
-    {{> form }}
-  
-    <div class="filter">
-      <button id="hide-completed-button">
-        {{#if hideCompleted}}
-        Show All
-        {{else}}
-        Hide Completed
-        {{/if}}
-      </button>
-    </div>
-  
-    <ul class="tasks">
-      {{#each tasks}}
-      {{> task}}
-      {{/each}}
-    </ul>
-    {{else}}
-    {{> login }}
-    {{/if}}
-  </div>
-</body>
+

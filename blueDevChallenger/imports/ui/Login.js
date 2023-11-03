@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import './login.html';
+import './Login.html';
 
 Template.login.events({
   'submit .login-form'(e) {
