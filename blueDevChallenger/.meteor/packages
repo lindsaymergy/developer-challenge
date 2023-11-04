@@ -27,3 +27,4 @@ blaze-hot               # Update files using Blaze's API with HMR
 accounts-password
 dev-error-overlay
 reactive-dict
+accounts-ui
