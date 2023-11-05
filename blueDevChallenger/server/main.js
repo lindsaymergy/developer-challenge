@@ -1,23 +1,32 @@
 import { Meteor } from 'meteor/meteor';
-import { TasksCollection } from '/imports/api/TasksCollection';
+import { AgentsCollection } from '/imports/api/AgentsCollection';
 
-const insertTask = (taskText, user) =>
-  TasksCollection.insert({
-    text: taskText,
-    userId: user._id,
-    createdAt: new Date(),
+const insertAgent = (name, address, phone) => {
+  AgentsCollection.insert({
+    name: name,
+    address: address,
+    phone: phone,
   });
+};
 
 Meteor.startup(() => {
-  if (TasksCollection.find().count() === 0) {
+  if (AgentsCollection.find().count() === 0) {
     [
-      'First Task',
-      'Second Task',
-      'Third Task',
-      'Fourth Task',
-      'Fifth Task',
-      'Sixth Task',
-      'Seventh Task'
-    ].forEach(taskText => insertTask(taskText, user));
+      agent = {
+        name: 'christy',
+        address: 'address',
+        phone: 'phone'
+      },
+      agent = {
+        name: 'belle',
+        address: 'address',
+        phone: 'phone'
+      },
+      agent = {
+        name: 'megan',
+        address: 'address',
+        phone: 'phone'
+      },
+    ].forEach(agent => insertAgent(agent.name, agent.address, agent.phone));
   }
 });
