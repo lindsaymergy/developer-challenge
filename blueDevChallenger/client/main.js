@@ -1,1 +1,1 @@
-import '../imports/ui/App.js';
+import '../src/ui/App.js';

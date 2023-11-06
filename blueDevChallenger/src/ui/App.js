@@ -14,7 +14,7 @@ Template.mainContainer.onCreated(function mainContainerOnCreated() {
 });
 
 Template.mainContainer.events({
-  'click .user'() {
+  'click .account'() {
     Meteor.logout();
   },
 });

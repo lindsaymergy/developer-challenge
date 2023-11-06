@@ -1,0 +1,43 @@
+<body>
+    {{> mainContainer}}
+</body>
+
+<template name="mainContainer">
+    <div class="app">
+        <header>
+            <div class="bar">
+                <div class="header">
+                    <div class="left">
+                        <div class="image">
+                            <img src="../../../assets/logo-light.svg">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span>
+                            agents
+                        </span>
+                        <span class="account">
+                            {{#if isUserLogged}}
+                            logout
+                            {{else}}
+                            login
+                            {{/if}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+            {{#if isUserLogged}}
+            <ul class="agents">
+                {{#each agents}}
+                    {{> agent}}
+                {{/each}}
+            </ul>
+            {{else}}
+            {{> login }}
+            {{/if}}
+        </div>
+    </div>
+</template>

@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { AgentsCollection } from '/imports/api/AgentsCollection';
+import { AgentsCollection } from '/src/api/AgentsCollection';
 
 const insertAgent = (name, address, phone) => {
   AgentsCollection.insert({
